@@ -198,3 +198,6 @@ npm-debug.log
 yarn-error.log
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,django,vuejs
+
+# PDF
+*.PDF
