@@ -5,5 +5,5 @@ urlpatterns=[
     path("", product_list, name="product-list"),
     path("product/<int:pk>/", product_detail, name="product-detail"),
     path("manufacturers/", manufacturers_list, name="manufacturers-list"),
-    path("manufacturer/<int:pk>", manufacturer_detail, name="manufacturer-detail")
+    path("manufacturers/<int:pk>", manufacturer_detail, name="manufacturer-detail")
 ]
