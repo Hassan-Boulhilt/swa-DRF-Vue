@@ -33,6 +33,33 @@ def product_detail(request, pk):
             "message": "Product not found!"
         }},status= 404)
     return response
+
+def manufacturers_list(request):
+    manufacturers = Manufacturer.objects.all()
+    data ={ "manufacturers": list(manufacturers.values())}
+    response = JsonResponse(data)
+    return response
+
+def manufacturer_detail(request, pk):
+    try:
+        manufacturer = Manufacturer.objects.get(pk= pk)
+        data = {"manufacturer":{
+                                "name": manufacturer.name,
+                                "location": manufacturer.location
+                            }
+            }
+        response = JsonResponse(data)
+    except:
+        response = JsonResponse({
+            "error":{
+                "code": 404,
+                "message": "Manufacturer not found",
+            }
+        }, status=404)
+    return response
+
+
+
 # class ProductDetailView(DetailView):
 #     model = Product
 #     template_name = "products/product_detail.html"
