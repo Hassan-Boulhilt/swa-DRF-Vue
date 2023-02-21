@@ -139,6 +139,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+vue+drf
 
 # Spyder project settings
 .spyderproject
